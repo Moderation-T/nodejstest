@@ -105,7 +105,7 @@ bell.setMaxListeners(bell.getMaxListeners() + 1);
 console.log(bell.getMaxListeners());
 
 // ***************** emitter.eventNames() **************************
-// 以数据模式返回事件名称
+// 以数组模式返回事件名称
 
 const myEE = new EventEmitter();
 myEE.on('foo', () => {});
