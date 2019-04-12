@@ -17,8 +17,6 @@ async function fn() {
 const callbackFunction = util.callbackify(fn);
 
 callbackFunction((err, ret) => {
-  console.log(err, ret);
-
   if (err) throw err;
   console.log(ret);
 });
@@ -30,3 +28,25 @@ process.env.NODE_DEBUG = 'foo';
 const debuglog = util.debuglog('foo');
 
 debuglog('hello from foo [%d]', 123);
+
+// ******************** util.format(format[, …args]) ************************
+/** 
+ * 作用：返回一个格式化后的字符串，使用第一个参数作为一个类似 printf 的格式。
+对应的占位符：
+    %s - 字符串
+    %d - 数值
+    %i - Integer
+    %f - Float
+    %j - JSON
+    %o - Object
+    %% - 单个百分号（'%'）。不消耗参数。    
+*/
+console.log(util.format('%s:%d', 'fan', 100)); // print 'fan:100'
+
+// ************ util.inherits(constructor, superConstructor) **************
+// 用于继承对象的公有属性 是不被鼓励使用的 
+// Usage of util.inherits() is discouraged. Please use the ES6 class and extends keywords to get language level inheritance support
+
+
+// *************** 没在具体场景使用过 *********************
+// util.deprecate(function, string)
