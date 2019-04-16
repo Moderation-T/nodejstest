@@ -44,9 +44,16 @@ debuglog('hello from foo [%d]', 123);
 console.log(util.format('%s:%d', 'fan', 100)); // print 'fan:100'
 
 // ************ util.inherits(constructor, superConstructor) **************
-// 用于继承对象的公有属性 是不被鼓励使用的 
+// 用于继承对象的公有属性 是不被鼓励使用的
 // Usage of util.inherits() is discouraged. Please use the ES6 class and extends keywords to get language level inheritance support
 
+// ************ util.inspect() **************
+// 控制一个对象打印的显示效果
+// 有很多属性
+// https://nodejs.org/dist/latest-v10.x/docs/api/util.html#util_util_inspect_object_options
+let obj = { name: 'tang', city: { name: 'beijig' } };
+console.log(util.inspect(obj, { depth: 2 })); // 显示两层
+console.log(util.inspect(obj, { colors: true })); // 显示两层
 
 // *************** 没在具体场景使用过 *********************
 // util.deprecate(function, string)
