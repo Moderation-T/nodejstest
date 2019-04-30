@@ -4,5 +4,5 @@ const Square = require('./square'); // 方形
 // 创建方形实例
 const mySquare = new Square(2);
 console.log(`The area of mySquare is ${mySquare.area()}`);
-
+// 调用圆形方法
 console.log(`The area of a circle of radius 4 is ${circle.area(4)}`);

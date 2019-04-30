@@ -2,8 +2,13 @@ var fs = require('fs'); //文件模块
 var path = require('path'); //系统路径模块
 var data = require('./code_abrvData.js');
 
-const newdata = data.map(item => ({ [item.证券代码.toString()]: item.证券简称 }));
-// const newdata = data.map(item => ({ [item.证券简称]: item.证券代码.toString() }));
+// 补零
+function fn3(num, length) {
+  return (Array(length).join('0') + num).slice(-length);
+}
+
+// const newdata = data.map(item => ({ [fn3(item.证券代码, 6).toString()]: item.证券简称 }));
+const newdata = data.map(item => ({ [item.证券简称]: fn3(item.证券代码, 6).toString() }));
 
 //把data对象转换为json格式字符串
 var content = JSON.stringify(newdata);
