@@ -4,11 +4,11 @@ var path = require('path'); //系统路径模块
 var Z0101 = require('./json/Z0101_IPO科创板扉页-发行概况.json');
 var Z0102 = require('./json/Z0102_IPO科创板扉页-重大事项提示.json');
 
-const titles = ['IPO科创板扉页-发行概况', 'IPO科创板扉页-重大事项提示'];
+const titles = ['Z0101_IPO科创板扉页-发行概况', 'Z0102_IPO科创板扉页-重大事项提示'];
 
 const dict = {
-  'IPO科创板扉页-发行概况': Z0101,
-  'IPO科创板扉页-重大事项提示': Z0102,
+  'Z0101_IPO科创板扉页-发行概况': Z0101,
+  'Z0102_IPO科创板扉页-重大事项提示': Z0102,
 };
 
 const result = titles.map(item => ({

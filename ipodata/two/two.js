@@ -2,22 +2,25 @@ var fs = require('fs'); //文件模块
 var path = require('path'); //系统路径模块
 // var data = require('./treeData.js');
 var Z0202 = require('./json/Z0202_IPO科创板概览-中介机构列表.json');
-var Z0202 = require('./json/Z0203_IPO科创板概览-发行概况（二）.json');
+var Z0203 = require('./json/Z0203_IPO科创板概览-发行概况（二）.json');
+var Z0204 = require('./json/Z0204_IPO科创板概览-主要会计数据及财务指标.json');
 var Z0205 = require('./json/Z0205_IPO科创板概览-发行人选择的上市标准.json');
 var Z0206 = require('./json/Z0206_IPO科创板概览-募集资金用途.json');
 
 const titles = [
-  'IPO科创板概览-中介机构列表',
-  'IPO科创板概览-发行概况（二）',
-  'IPO科创板概览-发行人选择的上市标准',
-  'IPO科创板概览-募集资金用途',
+  'Z0202_IPO科创板概览-中介机构列表',
+  'Z0203_IPO科创板概览-发行概况（二）',
+  'Z0204_IPO科创板概览-主要会计数据及财务指标',
+  'Z0205_IPO科创板概览-发行人选择的上市标准',
+  'Z0206_IPO科创板概览-募集资金用途',
 ];
 
 const dict = {
-  'IPO科创板概览-中介机构列表': Z0202,
-  'IPO科创板概览-发行概况（二）': Z0202,
-  'IPO科创板概览-发行人选择的上市标准': Z0205,
-  'IPO科创板概览-募集资金用途': Z0206,
+  'Z0202_IPO科创板概览-中介机构列表': Z0202,
+  'Z0203_IPO科创板概览-发行概况（二）': Z0203,
+  'Z0204_IPO科创板概览-主要会计数据及财务指标': Z0204,
+  'Z0205_IPO科创板概览-发行人选择的上市标准': Z0205,
+  'Z0206_IPO科创板概览-募集资金用途': Z0206,
 };
 
 const result = titles.map(item => ({

@@ -3,10 +3,10 @@ var path = require('path'); //系统路径模块
 // var data = require('./treeData.js');
 var Z0901 = require('./json/Z0901_IPO科创板募集资金运用与未来发展规划-募集资金用途.json');
 
-const titles = ['IPO科创板募集资金运用与未来发展规划-募集资金用途'];
+const titles = ['Z0901_IPO科创板募集资金运用与未来发展规划-募集资金用途'];
 
 const dict = {
-  'IPO科创板募集资金运用与未来发展规划-募集资金用途': Z0901,
+  'Z0901_IPO科创板募集资金运用与未来发展规划-募集资金用途': Z0901,
 };
 
 const result = titles.map(item => ({

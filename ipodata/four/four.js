@@ -3,10 +3,10 @@ var path = require('path'); //系统路径模块
 // var data = require('./treeData.js');
 var Z0401 = require('./json/Z0401_IPO科创板风险因素.json');
 
-const titles = ['IPO科创板风险因素'];
+const titles = ['Z0401_IPO科创板风险因素'];
 
 const dict = {
-  IPO科创板风险因素: Z0401,
+  Z0401_IPO科创板风险因素: Z0401,
 };
 
 const result = titles.map(item => ({

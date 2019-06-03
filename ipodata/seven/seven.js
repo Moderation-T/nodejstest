@@ -4,10 +4,10 @@ var path = require('path'); //系统路径模块
 
 var Z0702 = require('./json/Z0702_IPO科创板公司治理与独立性-发行人协议控制架构情况.json');
 
-const titles = ['IPO科创板公司治理与独立性-发行人协议控制架构情况'];
+const titles = ['Z0702_IPO科创板公司治理与独立性-发行人协议控制架构情况'];
 
 const dict = {
-  'IPO科创板公司治理与独立性-发行人协议控制架构情况': Z0702,
+  'Z0702_IPO科创板公司治理与独立性-发行人协议控制架构情况': Z0702,
 };
 
 const result = titles.map(item => ({
