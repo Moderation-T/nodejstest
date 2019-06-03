@@ -1,3 +1,5 @@
+// require 加载不到文件是 会先找 circle.js 然后找 circle.json 然后再找 circle.node
+
 // 在node.js中，每个文件都被当做单独的模块
 const circle = require('./circle'); // 圆形
 const Square = require('./square'); // 方形
@@ -22,4 +24,4 @@ console.log(require.main);
 // 1. js模块
 // 2. json模块
 // 3. node C++扩展二进制模块
-console.log(require.extensions);
+console.log(require.extensions); //deprecated
