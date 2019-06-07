@@ -1,4 +1,4 @@
-// 事件发射器模块
+// 事件发射器模块 最大的作用就是解耦合
 const EventEmitter = require('events');
 const util = require('util'); // 做原型继承 还有很多其他方法
 const process = require('process');

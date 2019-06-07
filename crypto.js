@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-let obj = crypto.createHash('md5'); // 告诉她签名算法到底是哪种 md5 sha1
+let obj = crypto.createHash('md5'); // 告诉她签名算法到底是哪种 md5 sha1...
 
 obj.update('123'); // 往里边堆东西
 obj.update('555'); // 可以堆好几次
