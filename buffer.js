@@ -59,3 +59,5 @@ buf1.writeInt16BE();
  * string.decoder
  * 他的出现是为了解决乱码问题
  */
+
+//  concat 连接buffer

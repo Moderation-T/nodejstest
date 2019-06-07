@@ -9,6 +9,7 @@ const port = 8080;
 const server = http.createServer((req, res) => {
   res.statusCode = 200; // 返回码
   res.setHeader('Content-Type', 'text/plain'); // 设置响应头
+  res.write('0000')
   res.end('Hello World!'); // 设置返回
 });
 
