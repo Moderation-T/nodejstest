@@ -1,5 +1,5 @@
 const qs = require('querystring');
 
-let url = 'open_source=weibo_search&user=tang';
+let url = 'sopen_source=weibo_search&user=tang';
 
 console.log(qs.parse(url));
