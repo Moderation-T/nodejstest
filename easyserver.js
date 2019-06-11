@@ -1,9 +1,19 @@
 const http = require('http');
 const fs = require('fs');
+const url = require('url');
+const querystring = require('querystring');
+
 const hostname = '127.0.0.1';
 const port = 8000;
 
 const server = http.createServer((req, res) => {
+  req.on('data', data => {
+    const msg = querystring.parse(data.toString());
+    const { user, pwd } = msg;
+    console.log(user, pwd); // post 得到用户和密码
+  }); // 有一个端到达了
+  req.on('end', () => {}); // 所有的传输结束了
+
   switch (req.url) {
     case '/hi':
       fs.readFile(`fs.json`, (err, data) => {
@@ -33,15 +43,3 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
-
-const buf = Buffer.from('hello world', 'ascii');
-
-console.log(buf.toString('hex')); // hex 16进制
-// Prints: 68656c6c6f20776f726c64
-console.log(buf.toString('base64')); // 
-// Prints: aGVsbG8gd29ybGQ=
-
-console.log(Buffer.from('fhqwhgads', 'ascii'));
-// Prints: <Buffer 66 68 71 77 68 67 61 64 73>
-console.log(Buffer.from('fhqwhgads', 'utf16le'));
-// Prints: <Buffer 66 00 68 00 71 00 77 00 68 00 67 00 61 00 64 00 73 00>
