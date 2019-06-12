@@ -1,14 +1,18 @@
-Buffer.prototype.split=Buffer.prototype.split||function (b){
-  let arr=[];
+// 传入切分字符 然后根据索引 一段一段分
 
-  let cur=0;
-  let n=0;
-  while((n=this.indexOf(b, cur))!=-1){
-    arr.push(this.slice(cur, n));
-    cur=n+b.length;
-  }
+Buffer.prototype.split =
+  Buffer.prototype.split ||
+  function(b) {
+    let arr = [];
 
-  arr.push(this.slice(cur));
+    let cur = 0;
+    let n = 0;
+    while ((n = this.indexOf(b, cur)) != -1) {
+      arr.push(this.slice(cur, n));
+      cur = n + b.length;
+    }
 
-  return arr;
-};
+    arr.push(this.slice(cur));
+
+    return arr;
+  };
