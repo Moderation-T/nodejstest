@@ -7,13 +7,15 @@ const hostname = '127.0.0.1';
 const port = 8000;
 
 const server = http.createServer((req, res) => {
-  req.on('data', data => {
-    const msg = querystring.parse(data.toString());
-    const { user, pwd } = msg;
-    console.log(user, pwd); // post 得到用户和密码
-  }); // 有一个端到达了
-  req.on('end', () => {}); // 所有的传输结束了
+  /** 实验表单 post 上传如何获得数据的*/
+  // req.on('data', data => {
+  //   const msg = querystring.parse(data.toString());
+  //   const { user, pwd } = msg;
+  //   console.log(user, pwd); // post 得到用户和密码
+  // }); // 有一个端到达了
+  // req.on('end', () => {}); // 所有的传输结束了
 
+  // 模仿 api 请求
   switch (req.url) {
     case '/hi':
       fs.readFile(`fs.json`, (err, data) => {
