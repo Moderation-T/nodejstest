@@ -12,13 +12,13 @@ let server = http.createServer((req, res) => {
 
   //rs.pipe(res);
 
-  res.setHeader('content-encoding', 'gzip');
+  res.setHeader('content-encoding', 'gzip'); // 告诉浏览器咱是gzip  让他解析
 
   let gz = zlib.createGzip();
   rs.pipe(gz).pipe(res);
 
   rs.on('error', err => {
-    res.writeHeader(404);
+    res.statusCode = 404;
     res.write('Not Found');
 
     res.end();
