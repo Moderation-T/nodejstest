@@ -10,9 +10,7 @@ const _key = 'sadfslekrtuew5iutoselgdtjiypoydse4ufhs.edtyo;s8te4arfeliawkfhtsie5
 
 function md5(str) {
   let obj = crypto.createHash('md5');
-
   obj.update(str);
-
   return obj.digest('hex');
 }
 
